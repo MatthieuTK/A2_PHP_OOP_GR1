@@ -1,0 +1,20 @@
+{% extends ('base.html.twig') %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="text-center">Mon Pokemon</h2>
+                <div class="alert alert-warning" role="alert">
+                    <p class="text-center">Pokemon créé par <strong>{{ userName }}</strong></p>
+                    <p><em>Nom</em>: {{ userPokemon.name }}</p>
+                    <p><em>PV</em>: {{ userPokemon.hp }}</p>
+                    <p><em>Type</em>: {{ userPokemon.Type }}</p>
+                </div>
+                 {% if pokemonHp == 0 %}
+                    <p class="text-center"><a class="btn btn-primary btn-lg" href="rez.php" role="button">Ressuciter son Pokemon</a></p>
+                {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

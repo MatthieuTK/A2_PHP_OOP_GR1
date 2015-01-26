@@ -1,0 +1,24 @@
+{% extends ('base.html.twig') %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="text-center">Créer son compte</h2>
+            <p class="text-center">Choisir un ID et un mdp et envoyer !</p>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="username">ID</label>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="ID">
+                </div>
+                <div class="form-group">
+                    <label for="password">MDP</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="mdp">
+                </div>
+                <button type="submit" class="btn btn-default">envoyer</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2 class="text-center">Les dresseurs</h2>
+            <ul class="list-group">
+    {% for trainer in trainers %}
+
+            <li class="list-group-item">{{ trainer.username }} <a href="fight.php?defensorId={{ trainer.id }} "><button type="button" class="btn btn-primary">Battle him !</button></a></li>
+
+    {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
